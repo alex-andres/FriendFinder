@@ -1,6 +1,6 @@
 # Friend Finder
 
-One Paragraph of project description goes here
+Friend Finder is web app that provides the user with a friend matching service. The user completes a survey and then is able to receive a friend reccomendation that is based on the compatibility of the user with the rest of the users in the database. 
 
 ## Getting Started
 
