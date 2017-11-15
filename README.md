@@ -22,9 +22,11 @@ This application was deployed with Heroku
 
 ## Built With
 
-Express \n
-Path \n 
-Body-Parser \n
+Express
+
+Path
+
+Body-Parser
 
 ## Authors
 
