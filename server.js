@@ -1,19 +1,21 @@
 const express = require('express');
-const body-parser = require('body-parser');
+const bodyParser = require('body-parser');
 
 
 const app = express();
+const PORT =  8080;
 
-
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
 
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
+
+require("./app/routing/apiRoutes")(app);
+require("./app/routing/htmlRoutes")(app);
 
 
-app.listen(port function() {
-  console.log("App listening on PORT: " + PORT);
+
+app.listen(PORT, function() {
+  console.log('App listening on PORT: ' + PORT);
 });
