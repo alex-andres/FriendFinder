@@ -1,26 +1,19 @@
 const express = require('express');
-const path = require('path')
+const body-parser = require('body-parser');
 
-// Create an instance of the express app.
+
 const app = express();
 
-// Specify the port.
-const port = 3000;
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 
-// Routes
-app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, '/app/public/home.html'));
+
+require("./routes/apiRoutes")(app);
+require("./routes/htmlRoutes")(app);
+
+
+app.listen(port function() {
+  console.log("App listening on PORT: " + PORT);
 });
-
-app.get("/survey", function(req, res) {
-  res.sendFile(path.join(__dirname, "/app/public/home.html"));
-});
-
-app.get("/api/friends", function(req, res) {
-  res.sendFile(path.join(__dirname, "/app/routing/apiRoutes.js"));
-});
-
-
-// Initiate the listener.
-app.listen(port);
